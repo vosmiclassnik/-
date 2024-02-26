@@ -1,0 +1,81 @@
+q = 'Манчкин Вкусняшки'
+w = 'Тюльпаномания'
+e = 'ТКД вечеринка'
+r = 'Манчкин Делюкс'
+t = 'Трамвай Смерти'
+y = 'Иммаджинариум'
+u = 'Непостижимое'
+i = 'Особняки безумия'
+o = 'ТКД Троллье зелье'
+p = 'Эволюция'
+a = 'Коза Ностра'
+s = 'Рик и Морти'
+d = 'Легенда Пяти Колец'
+f = 'Цитадели'
+g = 'Забытые боги'
+h = 'Мачи коро'
+j = 'Закат империи'
+k = 'Ярость Дракулы'
+l = 'Орлеан'
+z = 'Индустрия'
+x = 'Нечто'
+c = 'Флакс: Зомби'
+v = 'Чужая планета'
+b = 'Русский Манчкин'
+n = 'Сопротивление'
+def resu(m):
+    random.shuffle(m)
+    return random.choice(m)
+
+
+
+
+import random
+party_games = [t, g, x, c, n, y]
+party_games1 = [g, y]
+party_games2 = [t, x, c, n]
+xardkor = [u, i, d, k]
+srednie = [q, w, e, r, o, p, a, s, f, h, j, l, z, v, b]
+economicks = [w, a, f, h, z]
+lavkraft = [u, i, k]
+fentesi = [e, o, g]
+s_rolyami = [u, k, x, v]
+konflickt = [q, r, a]
+igri_dlya_vzroslix = [q, e, r, t, o, a, s, b]
+asasasa = [d]
+a1 = int(input('Сколько вас человек?'))
+if a1 >= 6:
+    n = input('Семьей или друзьями?')
+    if n == 'Семьей':
+        rand = resu(party_games1)
+        print(rand)
+        print('Ваш выбор -', rand)
+if n == 'Друзьями':
+            rand = resu(party_games2)
+            print('Ваш выбор -', rand)
+# Работает
+
+if a1 <= 6:
+    a8 = input('Вы хотите сложную или среднюю игру?')
+    if a8 == 'Сложная':
+        a3 = input('Вам нравится лавкрафт?')
+        if a3 == 'да':
+            rand = resu(lavkraft)
+            print ('Ваш выбор -', rand)
+        else:
+            rand = resu(asasasa)
+            print('Ваш выбор -', rand)
+
+    else:
+                    asa = input('Вам нравится экономика?')
+                    if asa == 'да':
+                        rand = resu(economicks)
+                        print('Ваш выбор -', rand)
+                    else:
+                            a5 = input('Вам нравится фентези?')
+                            if a5 == 'да':
+                                rand = resu(fentesi)
+                                print('Ваш выбор -', rand)
+                            else:
+                                    rand = resu(srednie)
+                                    print('Ваш выбор -', rand)
